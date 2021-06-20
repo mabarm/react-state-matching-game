@@ -6,7 +6,7 @@ import {createTiles} from "../../misc/utils";
 import './App.css';
 
 class App extends Component{
-  Constructor(props){
+  constructor(props){
     super(props);
     this.state={
       numTiles:36,
