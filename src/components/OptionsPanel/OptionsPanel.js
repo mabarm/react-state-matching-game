@@ -7,7 +7,8 @@ const OptionsPanel = (props) => (
   <div>
     <TileSelector numTiles={props.numTiles} />
     <Button playing = {props.playing}
-    startGame={props.startGame}/>
+    startGame={props.startGame}
+    />
   </div>
 )
   
