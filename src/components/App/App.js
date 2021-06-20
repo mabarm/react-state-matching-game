@@ -16,13 +16,13 @@ class App extends Component{
       toBeCleared:null
   }}
   startGame=(numTiles)=>{
-    this.setState(state=>{
-      {playing:true;
-      previousTileIndex:null;
-      toBeCleared:null;
-    }
-    tiles:createTiles(state.numTiles)
+    this.setState((state)=>({
+      playing:true,
+      previousTileIndex:null,
+      toBeCleared:null,
+      tiles:createTiles(state.numTiles)
     })
+    )
 
   }
   
