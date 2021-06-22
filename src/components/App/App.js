@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OptionsPanel from '../OptionsPanel'
 import Board from '../Board'
-import {createTiles} from "../../misc/utils";
+import {createTiles , indexOfSelected} from "../../misc/utils";
 
 import './App.css';
 
@@ -25,10 +25,20 @@ class App extends Component{
     )}
 
     handleTileClicked(id,color){
+      const selectedTileIndex = indexOfSelected(tiles,id,color);
+      const previousTileIndex = this.state.previousTileIndex;
+      if(previousTileIndex!=null){
+
+      }
+      else{
+        previousTileIndex = selectedTileIndex;
+      }
       this.setState(state=>({
         tiles :  state.tiles,
-        toBeCleared : state.toBeCleared
+        toBeCleared : state.toBeCleared,
+        previousTileIndex : previousTileIndex,
       }))
+      
     }
   
   render() {
