@@ -26,7 +26,7 @@ class App extends Component{
 
     handleTileClicked(id,color){
       const selectedTileIndex = indexOfSelected(tiles,id,color);
-      const previousTileIndex = this.state.previousTileIndex;
+      let previousTileIndex = this.state.previousTileIndex;
       if(previousTileIndex!=null){
 
       }
