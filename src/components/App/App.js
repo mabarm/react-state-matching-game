@@ -22,9 +22,14 @@ class App extends Component{
       toBeCleared:null,
       tiles:createTiles(state.numTiles)
     })
-    )
+    )}
 
-  }
+    handleTileClicked(id,color){
+      this.setState(state=>({
+        tiles :  state.tiles,
+        toBeCleared : state.toBeCleared
+      }))
+    }
   
   render() {
   return (
